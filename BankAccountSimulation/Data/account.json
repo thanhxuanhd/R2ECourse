@@ -1,0 +1,50 @@
+[
+  {
+    "AccountNumber": "1001",
+    "OwnerName": "John Doe",
+    "Balance": 0,
+    "Status": 0,
+    "CreatedAt": "2026-04-01T10:00:00",
+    "IsAccountActive": true
+  },
+  {
+    "AccountNumber": "1002",
+    "OwnerName": "Jane Smith",
+    "Balance": 0,
+    "Status": 0,
+    "CreatedAt": "2026-04-02T11:00:00",
+    "IsAccountActive": true
+  },
+  {
+    "AccountNumber": "1003",
+    "OwnerName": "Bob Wilson",
+    "Balance": 0,
+    "Status": 1,
+    "CreatedAt": "2026-04-03T12:00:00",
+    "IsAccountActive": false
+  },
+  {
+    "AccountNumber": "1005",
+    "OwnerName": "Jo",
+    "Balance": 0,
+    "Status": 0,
+    "CreatedAt": "2026-04-08T23:18:11.6954656+07:00",
+    "IsAccountActive": true
+  },
+  {
+    "AccountNumber": "1006",
+    "OwnerName": "Sam Mel",
+    "Balance": 0,
+    "Status": 0,
+    "CreatedAt": "2026-04-09T22:55:10.0710396+07:00",
+    "IsAccountActive": true
+  },
+  {
+    "AccountNumber": "1007",
+    "OwnerName": "Zo",
+    "Balance": 1200.00,
+    "Status": 0,
+    "CreatedAt": "2026-04-09T23:15:50.3634791+07:00",
+    "IsAccountActive": true
+  }
+]
