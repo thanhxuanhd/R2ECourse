@@ -26,7 +26,7 @@
   {
     "AccountNumber": "1005",
     "OwnerName": "Jo",
-    "Balance": 0,
+    "Balance": 7180,
     "Status": 0,
     "CreatedAt": "2026-04-08T23:18:11.6954656+07:00",
     "IsAccountActive": true
@@ -42,7 +42,7 @@
   {
     "AccountNumber": "1007",
     "OwnerName": "Zo",
-    "Balance": 1200.00,
+    "Balance": 120,
     "Status": 0,
     "CreatedAt": "2026-04-09T23:15:50.3634791+07:00",
     "IsAccountActive": true
