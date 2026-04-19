@@ -1,0 +1,127 @@
+@model BankAccountSimulationMvc.Models.TransactionIndexViewModel
+@using BankAccountSimulationMvc.Models
+
+@{
+    ViewData["Title"] = "Transactions History";
+}
+
+<div class="row mt-5 mb-4">
+    <div class="col-12 d-flex justify-content-between align-items-center">
+        <div>
+            <h2 class="fw-bold mb-0">Transaction History</h2>
+            <p class="text-muted">Track and audit all account activities</p>
+        </div>
+        <a asp-controller="Account" asp-action="Index" class="btn btn-premium btn-premium-outline">
+            <i class="bi bi-arrow-left me-2"></i> Back to Accounts
+        </a>
+    </div>
+</div>
+
+<div class="card premium-card border-0 mb-4">
+    <div class="card-body p-4">
+        <form asp-action="Index" method="get">
+            <div class="row g-3 align-items-end">
+                <div class="col-md-5">
+                    <label for="searchString" class="form-label info-label">Search Account</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-white border-end-0"><i class="bi bi-search text-muted"></i></span>
+                        <input type="text" name="searchString" id="searchString" class="form-control border-start-0" value="@Model.SearchString" placeholder="Search by Account Number..." />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="typeFilter" class="form-label info-label">Transaction Type</label>
+                    <select name="typeFilter" id="typeFilter" class="form-select" asp-items="Model.TypeList" asp-for="TypeFilter">
+                        <option value="">All Types</option>
+                    </select>
+                </div>
+                <div class="col-md-3 d-flex gap-2">
+                    <button type="submit" class="btn btn-premium btn-premium-outline w-100">
+                        Filter
+                    </button>
+                    <a asp-action="Index" class="btn btn-premium btn-premium-outline w-100 bg-light">
+                        Clear
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card premium-card border-0 overflow-hidden">
+    <div class="card-header gradient-header py-3">
+        <div class="d-flex align-items-center">
+            <i class="bi bi-clock-history me-2 fs-5"></i>
+            <h5 class="mb-0">Activity Log</h5>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+            <thead class="bg-light">
+                <tr>
+                    <th class="ps-4">ID</th>
+                    <th>Account</th>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th class="pe-4">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Transactions != null && Model.Transactions.Any())
+                {
+                    @foreach (var item in Model.Transactions)
+                    {
+                        <tr>
+                            <td class="ps-4">
+                                <span class="text-muted small font-monospace">#@item.TransactionId</span>
+                            </td>
+                            <td>
+                                <span class="fw-bold text-primary font-monospace">@item.AccountNumber</span>
+                            </td>
+                            <td>
+                                @{
+                                    var typeClass = item.Type switch
+                                    {
+                                        TransactionType.Deposit => "bg-success text-white",
+                                        TransactionType.Withdraw => "bg-warning text-dark",
+                                        TransactionType.Transfer => "bg-info text-white",
+                                        _ => "bg-secondary text-white"
+                                    };
+                                }
+                                <span class="badge @typeClass rounded-pill px-3 py-2" style="font-weight: 500; font-size: 0.75rem;">
+                                    @item.Type
+                                </span>
+                            </td>
+                            @{
+                                var isPositive = item.Type == TransactionType.Deposit || (item.Type == TransactionType.Transfer && item.Description.Contains("Transfer In"));
+                                var colorClass = isPositive ? "text-success" : "text-danger";
+                                var prefix = isPositive ? "+" : "-";
+                            }
+                            <td class="@colorClass fw-bold font-monospace">
+                                @prefix@item.Amount.ToString("C")
+                            </td>
+                            <td>
+                                <div class="text-dark small">@item.TransactionDate.ToString("MMM dd, yyyy")</div>
+                                <div class="text-muted smaller">@item.TransactionDate.ToString("HH:mm:ss")</div>
+                            </td>
+                            <td class="pe-4">
+                                <span class="text-muted small">@item.Description</span>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="6" class="text-center py-5 text-muted">
+                            <div class="mb-2"><i class="bi bi-activity fs-1 opacity-25"></i></div>
+                            <p>No transactions found.</p>
+                            <a asp-action="Index" class="btn btn-sm btn-outline-secondary">Show All</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

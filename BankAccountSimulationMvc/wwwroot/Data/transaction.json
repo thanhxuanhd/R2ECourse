@@ -1,0 +1,258 @@
+[
+  {
+    "TransactionId": 1,
+    "Type": 0,
+    "Amount": 5000,
+    "TransactionDate": "2026-04-01T10:00:00",
+    "Description": "Initial deposit",
+    "AccountNumber": "1001"
+  },
+  {
+    "TransactionId": 2,
+    "Type": 0,
+    "Amount": 300,
+    "TransactionDate": "2026-04-02T11:00:00",
+    "Description": "Initial deposit",
+    "AccountNumber": "1002"
+  },
+  {
+    "TransactionId": 3,
+    "Type": 0,
+    "Amount": 1000,
+    "TransactionDate": "2026-04-03T12:00:00",
+    "Description": "Initial deposit",
+    "AccountNumber": "1003"
+  },
+  {
+    "TransactionId": 4,
+    "Type": 1,
+    "Amount": 200,
+    "TransactionDate": "2026-04-04T09:00:00",
+    "Description": "ATM Withdrawal",
+    "AccountNumber": "1001"
+  },
+  {
+    "TransactionId": 5,
+    "Type": 0,
+    "Amount": 2000,
+    "TransactionDate": "2026-04-08T23:21:17.0146766+07:00",
+    "Description": "Deposit of \u00A32,000.00 into account 1001",
+    "AccountNumber": "1001"
+  },
+  {
+    "TransactionId": 6,
+    "Type": 2,
+    "Amount": 100,
+    "TransactionDate": "2026-04-08T23:21:32.8860893+07:00",
+    "Description": "Transfer Out to 1005",
+    "AccountNumber": "1001"
+  },
+  {
+    "TransactionId": 7,
+    "Type": 2,
+    "Amount": 100,
+    "TransactionDate": "2026-04-08T23:21:32.8860966+07:00",
+    "Description": "Transfer In from 1001",
+    "AccountNumber": "1005"
+  },
+  {
+    "TransactionId": 8,
+    "Type": 1,
+    "Amount": 200,
+    "TransactionDate": "2026-04-08T23:22:49.2892035+07:00",
+    "Description": "Withdrawal of \u00A3200.00 from account 1001",
+    "AccountNumber": "1001"
+  },
+  {
+    "TransactionId": 9,
+    "Type": 0,
+    "Amount": 100,
+    "TransactionDate": "2026-04-09T22:56:20.9953771+07:00",
+    "Description": "Deposit of \u00A3100.00 into account 1005",
+    "AccountNumber": "1005"
+  },
+  {
+    "TransactionId": 10,
+    "Type": 0,
+    "Amount": 5000,
+    "TransactionDate": "2026-04-09T22:57:44.0171108+07:00",
+    "Description": "Deposit of \u00A35,000.00 into account 1005",
+    "AccountNumber": "1005"
+  },
+  {
+    "TransactionId": 11,
+    "Type": 2,
+    "Amount": 2020,
+    "TransactionDate": "2026-04-09T22:58:13.8078145+07:00",
+    "Description": "Transfer Out to 1006",
+    "AccountNumber": "1005"
+  },
+  {
+    "TransactionId": 12,
+    "Type": 2,
+    "Amount": 2020,
+    "TransactionDate": "2026-04-09T22:58:13.8078202+07:00",
+    "Description": "Transfer In from 1005",
+    "AccountNumber": "1006"
+  },
+  {
+    "TransactionId": 13,
+    "Type": 0,
+    "Amount": 101.00,
+    "TransactionDate": "2026-04-09T23:16:14.0304056+07:00",
+    "Description": "Deposit of \u00A3101.00 into account 1007",
+    "AccountNumber": "1007"
+  },
+  {
+    "TransactionId": 14,
+    "Type": 1,
+    "Amount": 901,
+    "TransactionDate": "2026-04-09T23:16:38.1314828+07:00",
+    "Description": "Withdrawal of \u00A3901.00 from account 1007",
+    "AccountNumber": "1007"
+  },
+  {
+    "TransactionId": 15,
+    "Type": 0,
+    "Amount": 1500,
+    "TransactionDate": "2026-04-11T14:54:51.7849234+07:00",
+    "Description": "Deposit of \u00A31,500.00 into account 1005",
+    "AccountNumber": "1005"
+  },
+  {
+    "TransactionId": 16,
+    "Type": 0,
+    "Amount": 6000,
+    "TransactionDate": "2026-04-11T14:55:15.1482175+07:00",
+    "Description": "Deposit of \u00A36,000.00 into account 1005",
+    "AccountNumber": "1005"
+  },
+  {
+    "TransactionId": 17,
+    "Type": 1,
+    "Amount": 200,
+    "TransactionDate": "2026-04-11T14:55:23.6181491+07:00",
+    "Description": "Withdrawal of \u00A3200.00 from account 1005",
+    "AccountNumber": "1005"
+  },
+  {
+    "TransactionId": 18,
+    "Type": 2,
+    "Amount": 120,
+    "TransactionDate": "2026-04-11T14:55:40.2917071+07:00",
+    "Description": "Transfer Out to 1007",
+    "AccountNumber": "1005"
+  },
+  {
+    "TransactionId": 19,
+    "Type": 2,
+    "Amount": 120,
+    "TransactionDate": "2026-04-11T14:55:40.2922647+07:00",
+    "Description": "Transfer In from 1005",
+    "AccountNumber": "1007"
+  },
+  {
+    "TransactionId": 20,
+    "Type": 2,
+    "Amount": 200,
+    "TransactionDate": "2026-04-18T16:41:13.8656371+07:00",
+    "Description": "Transfer Out to 1008",
+    "AccountNumber": "1003"
+  },
+  {
+    "TransactionId": 21,
+    "Type": 2,
+    "Amount": 200,
+    "TransactionDate": "2026-04-18T16:41:13.8688385+07:00",
+    "Description": "Transfer In from 1003",
+    "AccountNumber": "1008"
+  },
+  {
+    "TransactionId": 22,
+    "Type": 2,
+    "Amount": 100,
+    "TransactionDate": "2026-04-18T16:48:55.058184+07:00",
+    "Description": "Transfer Out to 1007",
+    "AccountNumber": "1003"
+  },
+  {
+    "TransactionId": 23,
+    "Type": 2,
+    "Amount": 100,
+    "TransactionDate": "2026-04-18T16:48:55.0581878+07:00",
+    "Description": "Transfer In from 1003",
+    "AccountNumber": "1007"
+  },
+  {
+    "TransactionId": 24,
+    "Type": 2,
+    "Amount": 1020,
+    "TransactionDate": "2026-04-18T17:01:58.7405785+07:00",
+    "Description": "Transfer Out to 1003 - Send Data",
+    "AccountNumber": "1005"
+  },
+  {
+    "TransactionId": 25,
+    "Type": 2,
+    "Amount": 1020,
+    "TransactionDate": "2026-04-18T17:01:58.7405823+07:00",
+    "Description": "Transfer In from 1005 - Send Data",
+    "AccountNumber": "1003"
+  },
+  {
+    "TransactionId": 26,
+    "Type": 2,
+    "Amount": 200,
+    "TransactionDate": "2026-04-18T17:06:52.1365046+07:00",
+    "Description": "Transfer Out to 1001",
+    "AccountNumber": "1005"
+  },
+  {
+    "TransactionId": 27,
+    "Type": 2,
+    "Amount": 200,
+    "TransactionDate": "2026-04-18T17:06:52.1365084+07:00",
+    "Description": "Transfer In from 1005",
+    "AccountNumber": "1001"
+  },
+  {
+    "TransactionId": 28,
+    "Type": 2,
+    "Amount": 200,
+    "TransactionDate": "2026-04-18T17:07:07.578044+07:00",
+    "Description": "Transfer Out to 1005",
+    "AccountNumber": "1001"
+  },
+  {
+    "TransactionId": 29,
+    "Type": 2,
+    "Amount": 200,
+    "TransactionDate": "2026-04-18T17:07:07.5780471+07:00",
+    "Description": "Transfer In from 1001",
+    "AccountNumber": "1005"
+  },
+  {
+    "TransactionId": 30,
+    "Type": 2,
+    "Amount": 200,
+    "TransactionDate": "2026-04-18T17:07:31.5059504+07:00",
+    "Description": "Transfer Out to 1002",
+    "AccountNumber": "1005"
+  },
+  {
+    "TransactionId": 31,
+    "Type": 2,
+    "Amount": 200,
+    "TransactionDate": "2026-04-18T17:07:31.505966+07:00",
+    "Description": "Transfer In from 1005",
+    "AccountNumber": "1002"
+  },
+  {
+    "TransactionId": 32,
+    "Type": 0,
+    "Amount": 200,
+    "TransactionDate": "2026-04-19T16:48:46.1328979+07:00",
+    "Description": "Deposit",
+    "AccountNumber": "1002"
+  }
+]

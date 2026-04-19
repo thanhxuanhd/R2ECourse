@@ -1,0 +1,101 @@
+@model BankAccountSimulationMvc.Models.Account
+
+@{
+    ViewData["Title"] = "Account Details";
+}
+
+<div class="row mt-5">
+    <div class="col-lg-8 offset-lg-2">
+        <div class="card premium-card border-0">
+            <div class="card-header gradient-header d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                    <div class="bg-white bg-opacity-25 p-2 rounded-3 me-3">
+                        <i class="bi bi-wallet2 fs-4"></i>
+                    </div>
+                    <h4 class="mb-0">Account Overview</h4>
+                </div>
+                <span class="status-badge @(Model.Status == AccountStatus.Active ? "status-active" : "status-frozen")">
+                    @Model.Status
+                </span>
+            </div>
+            <div class="card-body p-4 p-md-5">
+                <div class="row align-items-center mb-5">
+                    <div class="col-md-6">
+                        <div class="info-label">Current Balance</div>
+                        <div class="balance-value">@Model.Balance.ToString("C")</div>
+                    </div>
+                    <div class="col-md-6 text-md-end mt-4 mt-md-0">
+                        <div class="info-label">Account Number</div>
+                        <div class="info-value fs-4 text-primary font-monospace">@Model.AccountNumber</div>
+                    </div>
+                </div>
+
+                <div class="row g-4 pb-4 border-bottom">
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-person-circle text-muted me-3 fs-3"></i>
+                            <div>
+                                <div class="info-label">Account Owner</div>
+                                <div class="info-value">@Model.OwnerName</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-calendar-event text-muted me-3 fs-3"></i>
+                            <div>
+                                <div class="info-label">Created On</div>
+                                <div class="info-value">@Model.CreatedAt.ToString("f")</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-md-flex gap-3 justify-content-between align-items-center mt-5">
+                    <a asp-action="Index" class="btn btn-premium-outline btn-premium mb-3 mb-md-0 d-flex align-items-center justify-content-center w-100 w-md-auto">
+                        <i class="bi bi-arrow-left me-2"></i> Back to List
+                    </a>
+                    <div class="d-md-flex gap-3">
+                        <a asp-controller="Transaction" asp-action="Index" asp-route-searchString="@Model.AccountNumber" class="btn btn-premium btn-premium-outline mb-3 mb-md-0 d-flex align-items-center justify-content-center">
+                            <i class="bi bi-clock-history me-2"></i> History
+                        </a>
+                        <a asp-action="Edit" asp-route-id="@Model.AccountNumber" class="btn btn-primary btn-premium d-flex align-items-center justify-content-center shadow">
+                            <i class="bi bi-pencil-square me-2"></i> Edit Account
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quick Action Cards -->
+        @if (Model.Status == AccountStatus.Active)
+        {
+            <div class="row mt-4 g-4">
+                <div class="col-md-4">
+                    <a asp-controller="Transaction" asp-action="Deposit" asp-route-accountId="@Model.AccountNumber" class="text-decoration-none">
+                        <div class="card premium-card border-0 p-3 text-center">
+                            <i class="bi bi-arrow-down-circle fs-2 text-success mb-2"></i>
+                            <div class="fw-bold text-dark">Deposit</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a asp-controller="Transaction" asp-action="Withdraw" asp-route-accountId="@Model.AccountNumber" class="text-decoration-none">
+                        <div class="card premium-card border-0 p-3 text-center">
+                            <i class="bi bi-arrow-up-circle fs-2 text-warning mb-2"></i>
+                            <div class="fw-bold text-dark">Withdraw</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a asp-controller="Transaction" asp-action="Transfer" asp-route-accountId="@Model.AccountNumber" class="text-decoration-none">
+                        <div class="card premium-card border-0 p-3 text-center">
+                            <i class="bi bi-arrow-left-right fs-2 text-primary mb-2"></i>
+                            <div class="fw-bold text-dark">Transfer</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
